@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Suelo
+  - Jugador
+  - Enemigo
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - UI
   - Suelo
   - Pared
-  - 
-  - 
+  - Jugador
+  - Enemigo
   - 
   - 
   - 
@@ -41,6 +43,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fondo
+    uniqueID: 74173043
+    locked: 0
+  - name: Plano
+    uniqueID: 745416081
+    locked: 0
+  - name: Jugador
+    uniqueID: 1360066255
+    locked: 0
+  - name: Suelo
+    uniqueID: 1592090535
     locked: 0
   m_RenderingLayers:
   - Default

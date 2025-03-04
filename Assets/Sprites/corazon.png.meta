@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f3d6e3a421b0246438807651bf1c4e9c
+guid: 1368699cd95d3854fa0cd1a84dfae14b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2369920560725441951
-    second: cuadradoRojo_0
+      213: 7257727777897515217
+    second: corazon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cuadradoRojo_0
+      name: corazon_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 33
-        width: 432
-        height: 433
+        x: 12
+        y: 26
+        width: 201
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9d3fef8136a3e020800000000000000
-      internalID: 2369920560725441951
+      spriteID: 1d8011ef5f0a8b460800000000000000
+      internalID: 7257727777897515217
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cuadradoRojo_0: 2369920560725441951
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
