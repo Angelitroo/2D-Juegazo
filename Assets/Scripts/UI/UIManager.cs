@@ -4,15 +4,18 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pantallaGameOver;
+    [SerializeField] private GameObject opciones;
     [SerializeField] private AudioClip sonidoGameOver;
 
     private void Awake()
     {
         pantallaGameOver.SetActive(false);
+        opciones.SetActive(false);
     }
 
     public void GameOver()
     {
+        opciones.SetActive(true);
         pantallaGameOver.SetActive(true);
         Sonidos.instancia.ReproducirSonido(sonidoGameOver);
     }

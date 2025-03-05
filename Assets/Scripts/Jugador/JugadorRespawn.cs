@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using UnityEngine;
-
 
 public class JugadorRespawn : MonoBehaviour
 {
@@ -7,6 +7,7 @@ public class JugadorRespawn : MonoBehaviour
     private Transform checkpointActual;
     private Vida vidaJugador;
     private UIManager uiManager;
+    private HashSet<Transform> checkpointsUsados = new HashSet<Transform>();
 
     private void Awake()
     {
@@ -17,21 +18,25 @@ public class JugadorRespawn : MonoBehaviour
     public void ComprobarRespawn()
     {
         //Comprobar si hay checkpoint
-        if(checkpointActual == null)
+        if (checkpointActual == null || checkpointsUsados.Contains(checkpointActual))
         {
             uiManager.GameOver();
             return;
-        } 
+        }
+
         transform.position = checkpointActual.position;
         vidaJugador.Respawn();
 
         //mover camara
         Camera.main.GetComponent<CamaraController>().MoverNuevaHabitacion(checkpointActual.parent);
+
+        // Marcar el checkpoint como usado
+        checkpointsUsados.Add(checkpointActual);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Checkpoint"))
+        if (collision.CompareTag("Checkpoint"))
         {
             checkpointActual = collision.transform;
             Sonidos.instancia.ReproducirSonido(sonidoCheckpoint);
