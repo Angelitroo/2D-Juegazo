@@ -148,3 +148,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valorVida: 1
+  sonidoRecogida: {fileID: 8300000, guid: 7da50bf76e8930846b658c03f86aec2c, type: 3}

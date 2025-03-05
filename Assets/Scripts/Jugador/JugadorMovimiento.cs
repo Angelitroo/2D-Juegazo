@@ -14,6 +14,8 @@ public class JugadorMovimiento : MonoBehaviour
     private float saltoParedCooldown;
     private float horizontalInput;
 
+    [Header("Sonido salto")]
+    [SerializeField] private AudioClip sonidoSalto;
 
     //Para pillar los componentes
     private void Awake()
@@ -52,6 +54,8 @@ public class JugadorMovimiento : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
                 Saltar();
+                if(Input.GetKeyDown(KeyCode.Space) && isSuelo())
+                    Sonidos.instancia.ReproducirSonido(sonidoSalto);
         }
         else
             saltoParedCooldown += Time.deltaTime;

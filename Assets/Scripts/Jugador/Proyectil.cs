@@ -15,6 +15,8 @@ public class Proyectil : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
+
+
     private void Update()
     {
         if (impacto) return;
@@ -24,12 +26,21 @@ public class Proyectil : MonoBehaviour
         duracion += Time.deltaTime;
         if (duracion > 5) gameObject.SetActive(false);
     }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         impacto = true;
         boxCollider.enabled = false;
         anim.SetTrigger("explotar");
+
+        if(collision.CompareTag("Enemigo"))
+        {
+            collision.GetComponent<Vida>().RecibirDaño(1);
+        }
     }
+
+
     public void setDireccion(float _direccion)
     {
         duracion = 0;
@@ -44,6 +55,8 @@ public class Proyectil : MonoBehaviour
 
         transform.localScale = new UnityEngine.Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
+
+
     private void Desactivar()
     {
         gameObject.SetActive(false);

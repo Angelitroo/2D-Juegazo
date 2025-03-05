@@ -8,6 +8,7 @@ public class JugadorAtaque : MonoBehaviour
     [SerializeField] private float ataqueCooldown;
     [SerializeField] private Transform puntoFuego;
     [SerializeField] private GameObject[] bolasFuego;
+    [SerializeField] private AudioClip sonidoBolaFuego;
 
     private Animator anim;
     private JugadorMovimiento jugadorMovimiento;
@@ -31,6 +32,7 @@ public class JugadorAtaque : MonoBehaviour
 
     private void Atacar()   
     {
+        Sonidos.instancia.ReproducirSonido(sonidoBolaFuego);
         anim.SetTrigger("atacar");
         temporizador = 0;
         

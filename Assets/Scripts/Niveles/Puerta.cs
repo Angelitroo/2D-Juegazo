@@ -13,10 +13,14 @@ public class Puerta : MonoBehaviour
             if(collision.transform.position.x < transform.position.x)
             {
                 camaraController.MoverNuevaHabitacion(habitacionSiguiente);
+                habitacionSiguiente.GetComponent<Nivel>().ResetearNivel(true);                
+                habitacionAnterior.GetComponent<Nivel>().ResetearNivel(false);
             }
             else
             {
                 camaraController.MoverNuevaHabitacion(habitacionAnterior);
+                habitacionAnterior.GetComponent<Nivel>().ResetearNivel(true);
+                habitacionSiguiente.GetComponent<Nivel>().ResetearNivel(false);  
             }
         }
     }
