@@ -8892,7 +8892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NO ERES UN SIGMA
+  m_Text: HAS MUERTO
 --- !u!222 &697614520
 CanvasRenderer:
   m_ObjectHideFlags: 0
